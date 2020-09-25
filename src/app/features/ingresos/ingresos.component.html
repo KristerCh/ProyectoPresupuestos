@@ -1,0 +1,28 @@
+<h1>Listado de Ingresos</h1>
+
+<button class="btn btn-success mb-2" (click)="crearIngreso()"><i class="fas fa-plus"></i>
+    Crear
+</button>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Descripcion de ingreso</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ingreso of ingresos">
+            <th scope="row">{{ ingreso.idIngreso }}</th>
+            <td>{{ ingreso.descripcion }}</td>
+            <td>{{ ingreso.categoria.nombre }}</td>
+            <td>
+                <div class="btn-group">
+                    <button class="btn btn-info" (click)="editarIngreso(ingreso.idIngreso)"><i class="fas fa-pencil-alt"></i></button>
+                    <button class="btn btn-danger" (click)="deleteIngreso(ingreso.idIngreso)"><i class="fas fa-trash-alt"></i></button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
