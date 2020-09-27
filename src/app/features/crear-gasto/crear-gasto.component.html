@@ -1,0 +1,19 @@
+<h2>Crear Gasto</h2>
+<form>
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Nombre del Gasto</span>
+        </div>
+       <input name="nombre" type="text" class="form-control" id=nombreGasto placeholder="Ingrese el nombre del Ingreso" [(ngModel)]="gastos.descripcion">
+    </div>
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Seleccione una Categoria</span>
+            <select class="form-control" name="nombreCategoria" id="categoriaControlSelect" [(ngModel)]="gastos.idCategoria">
+                <option *ngFor="let categoria of categorias" [value]="categoria.idCategoria">{{ categoria.nombre }}</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="crearGasto()">Guardar</button>&nbsp;
+    <button type="submit" class="btn btn-outline-danger" (click)="cancelar()">Cancelar</button>
+</form>

@@ -10,13 +10,6 @@ export class IngresoService {
 
   URL = 'https://localhost:44384/api/ingresos';
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-    })
-  }  
-
-
   constructor(
     private http: HttpClient,
     private router: Router
@@ -35,11 +28,11 @@ export class IngresoService {
   }
 
   crearIngreso(ingreso: Ingreso){
-    return this.http.post<Ingreso>(this.URL, ingreso, this.httpOptions);
+    return this.http.post<Ingreso>(this.URL, ingreso);
   }
 
   editarIngreso(ingreso: Ingreso){
-    return this.http.put<Ingreso>(this.URL + '/' + ingreso.idIngreso, ingreso, this.httpOptions);
+    return this.http.put<Ingreso>(this.URL + '/' + ingreso.idIngreso, ingreso);
   }
 
 }

@@ -1,0 +1,6 @@
+projectKey=PresupuestoApp
+serverUrl=http://localhost:9000
+serverVersion=8.4.2.36762
+dashboardUrl=http://localhost:9000/dashboard?id=PresupuestoApp
+ceTaskId=AXTD8A1DJWr3d-8iH-Zl
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXTD8A1DJWr3d-8iH-Zl

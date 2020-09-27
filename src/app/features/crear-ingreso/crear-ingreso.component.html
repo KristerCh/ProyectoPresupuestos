@@ -1,15 +1,19 @@
 <h2>Crear Ingreso</h2>
 <form>
-    <div class="form-group">
-        <label for="nombreIngreso">Nombre del Ingreso</label>
-        <input name="nombre" type="text" class="form-control" id=nombreIngreso placeholder="Ingrese el nombre del Ingreso" [(ngModel)]="ingreso.descripcion">
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Nombre del Ingreso</span>
+        </div>
+       <input name="nombre" type="text" class="form-control" id=nombreIngreso placeholder="Ingrese el nombre del Ingreso" [(ngModel)]="ingreso.descripcion">
     </div>
-    <div class="form-group">
-        <label for="categoriaControlSelect">Seleccione una categoria</label>
-        <select name="nombreCategoria" id="categoriaControlSelect" [(ngModel)]="ingreso.idCategoria">
-            <option *ngFor="let categoria of categorias" [value]="categoria.idCategoria">{{ categoria.nombre }}</option>
-        </select>
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Seleccione una Categoria</span>
+            <select class="form-control" name="nombreCategoria" id="categoriaControlSelect" [(ngModel)]="ingreso.idCategoria">
+                <option *ngFor="let categoria of categorias" [value]="categoria.idCategoria">{{ categoria.nombre }}</option>
+            </select>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary" (click)="crearIngreso()">Guardar</button>
-    <button type="submit" class="btn btn-light" (click)="cancelar()">Cancelar</button>
+    <button type="submit" class="btn btn-primary" (click)="crearIngreso()">Guardar</button>&nbsp;
+    <button type="submit" class="btn btn-outline-danger" (click)="cancelar()">Cancelar</button>
 </form>

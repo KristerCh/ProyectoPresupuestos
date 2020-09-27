@@ -1,0 +1,28 @@
+<h1>Listado de Gastos</h1>
+
+<button class="btn btn-success mb-2" data-toggle="modal" data-target="#ingreso" (click)="crearGasto()"><i class="fas fa-plus"></i>
+    Crear
+</button>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Descripcion de Gasto</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>     
+        <tr *ngFor="let gasto of gastos; let indice = index">
+            <th scope="row">{{ indice + 1 }}</th>
+            <td>{{ gasto.descripcion }}</td>
+            <td>{{ gasto.categoria.nombre }}</td>
+            <td>
+                <div class="btn-group">
+                    <button class="btn btn-info" (click)="editarGasto(gasto.idGasto)"><i class="fas fa-pencil-alt"></i></button>
+                    <button class="btn btn-danger" (click)="deleteGasto(gasto.idGasto)"><i class="fas fa-trash-alt"></i></button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

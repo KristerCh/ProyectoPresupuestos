@@ -1,0 +1,20 @@
+<h2>Editar Categoria</h2>
+<form>
+    <div class="form-group input-group d-inline-flex">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Nombre de Categoria</span>
+        </div>
+       <input name="nombre" type="text" class="form-control" [value]="categorias.nombre" id="nombre" placeholder="Ingresar Nombre de Categoria" [(ngModel)]="categorias.nombre">
+    </div>
+    <div class="form-group input-group d-inline-flex">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Seleccione un Tipo</span>
+            <select class="form-control" name="tipo" id="tipo" [(ngModel)]="categorias.tipo">
+                <option value="Ingreso">Ingreso</option>
+                <option value="Gasto">Gasto</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="editarCategoria()">Guardar</button>&nbsp;
+    <button type="submit" class="btn btn-outline-danger" (click)="cancelar()">Cancelar</button>
+</form>

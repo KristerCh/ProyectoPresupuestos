@@ -25,15 +25,15 @@ export class EditarIngresoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('idIngreso');
+    const id = +this.route.snapshot.paramMap.get('id');
 
     this.categoriaService.obtenerCategorias().subscribe(res => {
       this.categorias = res;
     });
 
-    this.ingresoService.obtenerIngreso(id).subscribe(res => {
-      this.ingreso = res;
-    });
+    this.ingresoService.obtenerIngreso(id).subscribe(response => {
+      this.ingreso = response;
+    });;
   }
 
   editarIngreso(){

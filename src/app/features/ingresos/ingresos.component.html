@@ -1,6 +1,6 @@
 <h1>Listado de Ingresos</h1>
 
-<button class="btn btn-success mb-2" (click)="crearIngreso()"><i class="fas fa-plus"></i>
+<button class="btn btn-success mb-2" data-toggle="modal" data-target="#ingreso" (click)="crearIngreso()"><i class="fas fa-plus"></i>
     Crear
 </button>
 <table class="table table-striped">
@@ -13,8 +13,8 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let ingreso of ingresos">
-            <th scope="row">{{ ingreso.idIngreso }}</th>
+        <tr *ngFor="let ingreso of ingresos; let indice = index">
+            <th scope="row">{{ indice + 1 }}</th>
             <td>{{ ingreso.descripcion }}</td>
             <td>{{ ingreso.categoria.nombre }}</td>
             <td>

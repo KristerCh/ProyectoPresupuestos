@@ -11,6 +11,13 @@ import { PaginaNoSeEncuentraComponent } from './features/pagina-no-se-encuentra/
 import { NavegacionComponent } from './features/navegacion/navegacion.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CategoriaComponent } from './features/categoria/categoria.component';
+import { CrearCategoriaComponent } from './features/crear-categoria/crear-categoria.component';
+import { EditarCategoriaComponent } from './features/editar-categoria/editar-categoria.component';
+import { GastosComponent } from './features/gastos/gastos.component';
+import { CrearGastoComponent } from './features/crear-gasto/crear-gasto.component';
+import { EditarGastoComponent } from './features/editar-gasto/editar-gasto.component';
+import { ModulosComponent } from './features/modulos/modulos.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +27,14 @@ import { FormsModule } from '@angular/forms';
     CrearIngresoComponent,
     EditarIngresoComponent,
     PaginaNoSeEncuentraComponent,
-    NavegacionComponent
+    NavegacionComponent,
+    CategoriaComponent,
+    CrearCategoriaComponent,
+    EditarCategoriaComponent,
+    GastosComponent,
+    CrearGastoComponent,
+    EditarGastoComponent,
+    ModulosComponent
   ],
   imports: [
     FormsModule,

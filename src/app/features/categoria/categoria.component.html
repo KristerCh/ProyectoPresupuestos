@@ -1,0 +1,29 @@
+<h1>Listado de Categorias</h1>
+
+<button class="btn btn-success mb-2" data-toggle="modal" data-target="#categoria" (click)="crearCategoria()"><i class="fas fa-plus"></i>
+    Crear
+</button>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let categorias of categoria; let indice = index">
+            <th scope="row">{{ indice + 1 }}</th>
+            <td>{{ categorias.nombre }}</td>
+            <td>{{ categorias.tipo }}</td>
+            <td>
+                <div class="btn-group">
+                    <button class="btn btn-info" (click)="editarCategoria(categorias.idCategoria)"><i class="fas fa-pencil-alt"></i></button>
+                    <button class="btn btn-danger" (click)="deleteCategoria(categorias.idCategoria)"><i class="fas fa-trash-alt"></i></button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
